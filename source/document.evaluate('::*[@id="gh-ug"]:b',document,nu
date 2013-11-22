@@ -1,3 +1,0 @@
-document.evaluate('//*[@id="gh-ug"]/b',document,null,9,null).singleNodeValue.innerText
-
-document.getElementsByTagName("iframe")[0].contentWindow.document.cookie
