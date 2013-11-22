@@ -1,0 +1,151 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Friends don't let friends get XSSED</title> 
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Vali Malinoiu" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="css/impress-demo.css" rel="stylesheet" />  
+    <link href="css/xss.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+
+    <div id="first-page" class="step slide" data-x="-1000" data-y="-1500">
+    </div>
+
+    <div class="step slide" data-x="0" data-y="-1500">
+        <q>Vali ... <strong>WHO ?!</strong></q>
+        <p>()<strong>developer</strong>, (occasional)<strong>speaker</strong>, (wannabe)<strong>blogger</strong>, (hungry-for)<strong>technology</strong>, (passionate-about)<strong>security</strong></p>
+        <q>Contact me:</q>
+        <p>(twitter)@kodeslacker</p>
+        <p>(github)kodeslacker</p>
+        <p>(email)kodeslacker@outlook.com</p>
+    </div>
+
+    <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">let's talk about</span>
+        <h1>XSS<sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup>hacking websites included</span>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>It's a type of<strong>security vulnerability</strong> <br/>
+        typically found in <a href="#">Web Applications</a> <br/>
+        that enables the <strong>hacker</strong> to inject client-side scripts into the web page</p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>what flavours of  <b>XSS</b> <span>are out there?</span></p>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>There are  <b>'two'</b> main types of xss</p>
+    </div>
+    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
+        <p>there are <b class="rotating">non-persistent</b> <b class="scaling">XSS</b></p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>and there are <b class="rotating">persistent</b> <b class="scaling">XSS</b></p>
+    </div>
+
+    <div class="step" data-x="6600" data-y="5200" data-scale="4">
+        <span class="try">what about the</span>
+        <b>DANGERS</b>
+        <span class="footnote">of XSS? what can i do with them?</span>
+    </div>
+    <div class="step" data-x="6600" data-y="5200" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>Defacements ... !</p>
+        <img src="images/nasa_defacement.jpg">
+    </div>
+    <div class="step" data-x="6600" data-y="5200" data-z="-6000" data-rotate="300" data-scale="1">
+        <p>Identity theft ... !</p>
+        <img src="images/pocwindowslive.png">
+    </div>
+    <div class="step" data-x="6600" data-y="5200" data-z="-8000" data-rotate="300" data-scale="1">
+        <p>Phishing...</p>
+    </div>
+       <div class="step" data-x="6600" data-y="5200" data-z="-7000" data-rotate="300" data-scale="1">
+        <p>And whatever your devious little mind can imagine ...</p>
+    </div>
+    <div class="step" data-x="6600" data-y="5200" data-z="-9000" data-rotate="300" data-scale="1">
+        <p>XSS spreads much faster than traditional viruses/malware</p>
+    </div>
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q><a href="https://en.wikipedia.org/wiki/Cross-site_scripting#Non-persistent">use the source</a>, Luke!</q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-z="-12000" data-scale="2">
+        <h1>IS IT THAT DANGEROUS?</h1>
+    </div>
+    <div id="its-in-3d" class="step" data-x="6400" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <img src="images/image4.png">
+        <span class="footnote">*2012 - most common web threats </span>
+    </div>
+
+    <div id="protect" class="step" data-x="8000" data-y="4000" data-scale="2">
+        <h1>How do i protect from it?</h1>
+        <img src="images/mario_vs_bowser.jpg">
+    </div>
+    <div class="step" data-x="8000" data-y="4000" data-z="-8000" data-rotate="300" data-scale="1">
+        <img src="images/tin-foil-hat.jpg">
+        <p>Put on your tin foil hats and be paranoid very paranoid. <br>TRUST NO ONE !!!</p>
+    </div>
+    <div class="step" data-x="8000" data-y="6000" data-z="-8000" data-rotate="300" data-scale="1">
+        <img src="images/poster.gif">
+        <p>One does not simply trust anyone ...</p>
+    </div>
+    <div class="step slide" data-x="9000" data-y="6000" data-z="-8000">
+        <q>How do we prottect our  <strong>WEBSITE?!</strong></q>
+        <p>Input filtering</p>
+        <q>Input validation</q>
+        <p>Output Encoding</p>
+        <p>Intrusion Detection Systems</p>
+        <p>Tidy the output</p>
+    </div>
+    <div class="step slide" data-x="9000" data-y="7500" data-z="-8000" style="text-align: center;" >
+       <q><a href="http://www.steauafc.com/ro/">Site 1</a></q>
+       <q><a href="http://www.psd.ro/">Site 2</a></q>
+       <q><a href="http://www.justinbieberneversaynever.com/">Site 3</a></q>
+       <q><a href="http://www.justinbieberneversaynever.com/">Site 4</a></q>
+
+    </div>
+
+</div>
+
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+
+</body>
+</html>
+
